@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 
-import TextField from './TextField';
+import TextField from '../common/TextField';
 
 class SignIn extends Component {
   render() {

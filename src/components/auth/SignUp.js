@@ -3,7 +3,7 @@ import { func } from 'prop-types';
 import { reduxForm, Field } from 'redux-form';
 import emailValidator from 'email-validator';
 
-import TextField from './TextField';
+import TextField from '../common/TextField';
 
 class SignUp extends Component {
   render() {
@@ -47,7 +47,7 @@ const validate = ({ email, password }) => {
 
   if (!email) {
     errors.email = 'Please, enter an email';
-  } else if (emailValidator.validate(email)) {
+  } else if (!emailValidator.validate(email)) {
     errors.email = 'Invalid email';
   }
 
