@@ -18,13 +18,13 @@ class SignUp extends Component {
           <div>
             <Field
               name="email"
-              component="input"
+              component={TextField}
             />
           </div>
           <div>
             <Field
               name="password"
-              component="input"
+              component={TextField}
               type="password"
             />
           </div>
@@ -56,6 +56,8 @@ const validate = ({ email, password }) => {
   } else if (password.length < 6) {
     errors.password = '6 symbols minimum';
   }
+
+  return errors;
 };
 
 export default reduxForm({ form: 'signUp', validate })(SignUp);

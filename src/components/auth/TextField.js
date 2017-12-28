@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const TextField = ({ input, type, meta }) => {
   const { error, touched } = meta;
 
-  const errorNode = (error && touched) && <div>{error}</div>
+  const errorNode = (error && touched) && <div>{error}</div>;
 
   return (
     <div>
