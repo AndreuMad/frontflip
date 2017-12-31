@@ -4,7 +4,7 @@ import { reduxForm, Field } from 'redux-form';
 
 import TextField from '../common/TextField';
 
-class SignIn extends Component {
+class AddPeopleForm extends Component {
   render() {
     const {
       handleSubmit,
@@ -12,16 +12,20 @@ class SignIn extends Component {
 
     return (
       <div>
-        <h2>Sign In</h2>
+        <h2>Add new person</h2>
         <form onSubmit={handleSubmit}>
           <Field
-            name="email"
+            name="firstName"
             component={TextField}
           />
           <Field
-            name="password"
+            name="lastName"
             component={TextField}
-            type="password"
+          />
+          <Field
+            name="email"
+            type="email"
+            component={TextField}
           />
           <div>
             <button>Submit</button>
@@ -32,7 +36,7 @@ class SignIn extends Component {
   }
 }
 
-SignIn.propTypes = {};
-SignIn.defaultProps = {};
+AddPeopleForm.propTypes = {};
+AddPeopleForm.defaultProps = {};
 
-export default reduxForm({ form: 'auth' })(SignIn);
+export default reduxForm({ form: 'people' })(AddPeopleForm);

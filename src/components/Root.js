@@ -5,6 +5,7 @@ import ProtectedRoute from './common/ProtectedRoute';
 
 import AdminPage from '../screens/AdminPage';
 import AuthPage from '../screens/AuthPage';
+import PeoplePage from '../screens/PeoplePage';
 
 class Root extends Component {
   render() {
@@ -12,6 +13,7 @@ class Root extends Component {
       <div>
         <ProtectedRoute path="/admin" component={AdminPage} />
         <Route path="/auth" component={AuthPage} />
+        <Route path="/people" component={PeoplePage} />
       </div>
     );
   }
