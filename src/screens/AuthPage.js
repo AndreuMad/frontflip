@@ -23,14 +23,14 @@ class AuthPage extends Component {
     return (
       <div>
         <div>
-          <NavLink to="/auth/sing-in" component={SignIn}>Sign In</NavLink>
-          <NavLink to="/auth/sing-up" component={SignUp}>Sign Up</NavLink>
+          <NavLink to="/auth/sign-in" component={SignIn}>Sign In</NavLink>
+          <NavLink to="/auth/sign-up" component={SignUp}>Sign Up</NavLink>
         </div>
         <div>
           <Switch>
-            <Route path="/auth/sing-in" render={() => <SignIn onSubmit={this.handleSignIn}/>}/>
-            <Route path="/auth/sing-up" render={() => <SignUp onSubmit={this.handleSignUp}/>}/>
-            <Redirect from="/auth" to="/auth/sing-in" />
+            <Route path="/auth/sign-in" render={() => <SignIn onSubmit={this.handleSignIn}/>}/>
+            <Route path="/auth/sign-up" render={() => <SignUp onSubmit={this.handleSignUp}/>}/>
+            <Redirect from="/auth" to="/auth/sign-in" />
           </Switch>
         </div>
         {loading && <Loader />}
